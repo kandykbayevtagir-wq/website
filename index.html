@@ -19,6 +19,14 @@
 
 <body>
 
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <img src="images/logo.png" alt="Podology MK" class="preloader-logo">
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container nav-container">
@@ -92,7 +100,11 @@
     </section>
 
     <!-- Services Section -->
-    <section class="section services" id="services">
+    <section class="section services" id="services" style="position: relative;">
+        <!-- Liquid Glass Background Blobs -->
+        <div class="glass-bg-blob" style="top: 10%; left: -5%; width: 400px; height: 400px; background: rgba(87, 197, 182, 0.2);"></div>
+        <div class="glass-bg-blob" style="bottom: 10%; right: -5%; width: 300px; height: 300px; background: rgba(26, 95, 122, 0.15); animation-delay: -5s;"></div>
+        
         <div class="container">
             <h2 data-i18n="services_title" class="animate-on-scroll">Услуги</h2>
             <div class="services-grid animate-on-scroll">
@@ -229,7 +241,10 @@
     </section>
 
     <!-- Branches / Logisitcs Section -->
-    <section class="section branches" id="branches">
+    <section class="section branches" id="branches" style="position: relative;">
+        <!-- Liquid Glass Background Blobs -->
+        <div class="glass-bg-blob" style="top: 20%; right: 10%; width: 350px; height: 350px; background: rgba(87, 197, 182, 0.15); animation-delay: -2s;"></div>
+        
         <div class="container">
             <h2 data-i18n="branches_title" class="animate-on-scroll">Наши филиалы</h2>
             <div class="branches-grid animate-on-scroll">
@@ -307,6 +322,58 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq" style="position: relative;">
+        <!-- Liquid Glass Background Blobs -->
+        <div class="glass-bg-blob" style="top: -10%; left: 10%; width: 300px; height: 300px; background: rgba(87, 197, 182, 0.2);"></div>
+        <div class="glass-bg-blob" style="bottom: 0%; right: 5%; width: 250px; height: 250px; background: rgba(26, 95, 122, 0.1); animation-delay: -3s;"></div>
+
+        <div class="container">
+            <h2 data-i18n="faq_title" class="animate-on-scroll">Часто задаваемые вопросы</h2>
+            <div class="faq-list animate-on-scroll">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_q1">Это больно?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a1">Абсолютно нет. Мы используем современные методы и оборудование, чтобы процедуры были максимально комфортными и безболезненными.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_q2">Как вы стерилизуете инструменты?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a2">Безопасность — наш приоритет. Инструменты проходят трехэтапную очистку, включая химическую дезинфекцию и 100% стерилизацию в автоклаве.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_q3">Нужно ли снимать гель-лак перед приемом?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a3">Желательно, но не обязательно. Наш специалист может снять покрытие аппаратом прямо на приеме (услуга оплачивается отдельно).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_q4">Вы работаете с детьми?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a4">Да, мы принимаем детей. Например, проблема вросшего ногтя часто встречается у подростков, и мы решаем ее бережно.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacts Section -->
     <section class="section contacts" id="contacts">
         <div class="container animate-on-scroll">
@@ -369,6 +436,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Наверх">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
 
     <!-- Scripts -->
     <script src="js/translations.js"></script>

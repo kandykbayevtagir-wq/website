@@ -53,6 +53,15 @@ const translations = {
         adv_4_desc: "Мы не просто делаем эстетично, мы решаем корень проблемы.",
         contacts_title: "Связаться с нами",
         contacts_text: "Мы всегда готовы ответить на ваши вопросы и подобрать удобное время для записи.",
+        faq_title: "Часто задаваемые вопросы",
+        faq_q1: "Это больно?",
+        faq_a1: "Абсолютно нет. Мы используем современные методы и оборудование, чтобы процедуры были максимально комфортными и безболезненными.",
+        faq_q2: "Как вы стерилизуете инструменты?",
+        faq_a2: "Безопасность — наш приоритет. Инструменты проходят трехэтапную очистку, включая химическую дезинфекцию и 100% стерилизацию в автоклаве.",
+        faq_q3: "Нужно ли снимать гель-лак перед приемом?",
+        faq_a3: "Желательно, но не обязательно. Наш специалист может снять покрытие аппаратом прямо на приеме (услуга оплачивается отдельно).",
+        faq_q4: "Вы работаете с детьми?",
+        faq_a4: "Да, мы принимаем детей. Например, проблема вросшего ногтя часто встречается у подростков, и мы решаем ее бережно.",
         footer_rights: "© 2026 Podology MK. Все права защищены."
     },
     kz: {
@@ -109,6 +118,15 @@ const translations = {
         adv_4_desc: "Біз тек эстетикалық жағын ғана емес, мәселенің түп-тамырын шешеміз.",
         contacts_title: "Бізбен байланысу",
         contacts_text: "Біз әрқашан сіздің сұрақтарыңызға жауап беруге және жазылу үшін ыңғайлы уақытты таңдауға дайынбыз.",
+        faq_title: "Жиі қойылатын сұрақтар",
+        faq_q1: "Бұл ауырта ма?",
+        faq_a1: "Ешқандай да. Заманауи әдістер мен жабдықтарды қолданып, ем-шараларды мейлінше жайлы әрі ауыртпалықсыз өтуін қамтамасыз етеміз.",
+        faq_q2: "Құралдарды қалай стерилизациялайсыздар?",
+        faq_a2: "Қауіпсіздік — басты міндетіміз. Құралдар үш кезеңді тазартудан өтеді: химиялық дезинфекция және автоклавта 100% стерилизация.",
+        faq_q3: "Қабылдау алдында гель-лакты өшіру керек пе?",
+        faq_a3: "Қажетті, бірақ міндетті емес. Біздің маман лакты аппаратпен қабылдау кезінде өшіре алады (қызмет бөлек төленеді).",
+        faq_q4: "Балалармен жұмыс істейсіздер ме?",
+        faq_a4: "Иә, балаларды да қабылдаймыз. Мысалы, ішке өскен тырнақ мәселесі жасөспірімдерде жиі кездеседі және біз оны ұқыпты шешеміз.",
         footer_rights: "© 2026 Podology MK. Барлық құқықтар қорғалған."
     },
     en: {
@@ -165,6 +183,15 @@ const translations = {
         adv_4_desc: "We don't just make it look aesthetic, we solve the root of the problem.",
         contacts_title: "Contact Us",
         contacts_text: "We are always ready to answer your questions and find a convenient time for your appointment.",
+        faq_title: "Frequently Asked Questions",
+        faq_q1: "Is it painful?",
+        faq_a1: "Absolutely not. We use modern methods and equipment to make procedures as comfortable and painless as possible.",
+        faq_q2: "How do you sterilize instruments?",
+        faq_a2: "Safety is our priority. Instruments undergo a three-stage cleaning process, including chemical disinfection and 100% sterilization in an autoclave.",
+        faq_q3: "Do I need to remove gel polish before the appointment?",
+        faq_a3: "It is conditionally recommended but not mandatory. Our specialist can remove the coating with a device right during the appointment (service is charged separately).",
+        faq_q4: "Do you treat children?",
+        faq_a4: "Yes, we accept children. For example, ingrown toenails are a common issue among teenagers, and we handle it with great care.",
         footer_rights: "© 2026 Podology MK. All rights reserved."
     }
 };

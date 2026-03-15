@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // ---- Preloader ----
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                preloader.classList.add('preloader-hidden');
+            }, 500); // Small delay to let the animation show
+        });
+    }
     // ---- Language Switcher ----
     const langBtns = document.querySelectorAll('.lang-btn');
     const defaultLang = 'ru';
@@ -105,5 +114,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
+    });
+
+    // ---- Scroll to Top Button ----
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // ---- FAQ Accordion ----
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            const answer = question.nextElementSibling;
+            
+            // Close all other open items
+            document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+                if (activeItem !== item) {
+                    activeItem.classList.remove('active');
+                    const activeAnswer = activeItem.querySelector('.faq-answer');
+                    if (activeAnswer) {
+                        activeAnswer.style.maxHeight = null;
+                    }
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+            
+            if (item.classList.contains('active')) {
+                // Set max height to scrollHeight for smooth animation
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = null;
+            }
+        });
     });
 });
