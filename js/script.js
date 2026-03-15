@@ -39,6 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize default language
     setLanguage(defaultLang);
 
+    // ---- Hamburger Menu ----
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+            document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+        });
+    }
+
     // ---- Smooth Scrolling ----
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
@@ -49,6 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetEl = document.querySelector(targetId);
             if (targetEl) {
                 e.preventDefault();
+
+                // Close mobile menu if open
+                if (navLinks && navLinks.classList.contains('open')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+
                 targetEl.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'

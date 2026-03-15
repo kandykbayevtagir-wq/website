@@ -236,6 +236,41 @@ img {
     text-decoration-thickness: 2px;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -607,38 +642,211 @@ img {
 
 /* Responsive */
 @media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+    }
+
     .nav-links {
-        display: none; /* simple mobile menu handling */
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        z-index: 1000;
+        padding: 0;
     }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links a {
+        font-size: 1.4rem;
+        padding: 18px 40px;
+        display: block;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+
+    .lang-switcher {
+        z-index: 1001;
+    }
+
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
+
     .about-grid, .marina-grid, .branches-grid {
         grid-template-columns: 1fr;
     }
+
+    .marina-grid {
+        gap: 30px;
+    }
+
+    .marina-photo::after {
+        display: none;
+    }
+
     .adv-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 0 60px;
+    }
+
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
     .section {
-        padding: 4rem 0;
+        padding: 3.5rem 0;
     }
+
+    h2 {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Buttons - touch friendly */
+    .btn {
+        min-height: 48px;
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+
     .hero-btns {
         flex-direction: column;
         width: 100%;
     }
+
     .hero-btns .btn {
         width: 100%;
+        justify-content: center;
     }
+
     .adv-grid {
         grid-template-columns: 1fr;
     }
+
     .contact-btns {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-btns .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+    }
+
+    /* Services grid mobile */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    /* Branches mobile */
+    .branch-card {
+        padding: 25px 20px;
+    }
+
+    .branch-actions .btn {
+        min-height: 48px;
+        font-size: 0.95rem;
+    }
+
+    /* About image */
+    .about-image {
+        max-height: 300px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    /* Marina mobile */
+    .marina-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .marina-text {
+        font-size: 1rem;
+    }
+
+    /* Footer mobile */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer {
+        padding: 40px 0 15px;
+    }
+
+    /* Footer links touch friendly */
+    .footer-links a {
+        display: inline-block;
+        padding: 8px 0;
+        min-height: 44px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .logo span {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .lang-btn {
+        font-size: 0.8rem;
+        padding: 4px;
+        min-width: 30px;
+        min-height: 30px;
     }
 }
